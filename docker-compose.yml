@@ -1,0 +1,35 @@
+services:
+  office:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      DATA_DIR: /data
+      ASSETS_DIR: /app/assets
+      DIST_DIR: /app/dist
+      STUN_URL: stun:localhost:3478
+      TURN_URL: turn:localhost:3478
+      TURN_USER: office
+      TURN_PASSWORD: officepass
+    volumes:
+      - ./data:/data
+      - ./assets/limezu:/app/assets/limezu
+    depends_on:
+      - coturn
+  coturn:
+    image: coturn/coturn:4.6.2
+    ports:
+      - "3478:3478/udp"
+      - "3478:3478/tcp"
+      - "49160-49200:49160-49200/udp"
+    command:
+      - -n
+      - --log-file=stdout
+      - --lt-cred-mech
+      - --fingerprint
+      - --user=office:officepass
+      - --realm=digitaloffice
+      - --listening-port=3478
+      - --min-port=49160
+      - --max-port=49200
+      - --external-ip=127.0.0.1

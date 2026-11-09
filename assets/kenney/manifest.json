@@ -1,0 +1,95 @@
+{
+  "id": "kenney",
+  "tileSize": 16,
+  "margin": 1,
+  "credit": { "name": "Kenney", "url": "https://kenney.nl" },
+  "sheets": {
+    "indoors": "indoors.png",
+    "characters": "characters.png",
+    "dungeon": "dungeon.png"
+  },
+  "sheetStride": {
+    "indoors": 17,
+    "characters": 17,
+    "dungeon": 16
+  },
+  "tiles": [
+    {
+      "id": 1,
+      "name": "Wood floor",
+      "sheet": "indoors",
+      "col": 24,
+      "row": 0,
+      "kind": "floor",
+      "collision": false,
+      "blocksSound": false
+    },
+    {
+      "id": 2,
+      "name": "Carpet",
+      "sheet": "indoors",
+      "col": 24,
+      "row": 4,
+      "kind": "floor",
+      "collision": false,
+      "blocksSound": false
+    },
+    {
+      "id": 3,
+      "name": "Wall",
+      "sheet": "dungeon",
+      "col": 4,
+      "row": 3,
+      "kind": "wall",
+      "collision": true,
+      "blocksSound": true
+    },
+    {
+      "id": 4,
+      "name": "Door",
+      "sheet": "dungeon",
+      "col": 9,
+      "row": 3,
+      "kind": "door",
+      "collision": false,
+      "blocksSound": false
+    },
+    {
+      "id": 5,
+      "name": "Chair",
+      "sheet": "indoors",
+      "col": 0,
+      "row": 2,
+      "kind": "object",
+      "collision": true,
+      "blocksSound": false
+    },
+    {
+      "id": 6,
+      "name": "Armchair",
+      "sheet": "indoors",
+      "col": 2,
+      "row": 2,
+      "kind": "object",
+      "collision": true,
+      "blocksSound": false
+    }
+  ],
+  "avatars": {
+    "mode": "presets",
+    "presets": [
+      { "id": "ada", "name": "Ada", "layers": [{ "sheet": "characters", "col": 0, "row": 5 }] },
+      { "id": "bea", "name": "Bea", "layers": [{ "sheet": "characters", "col": 1, "row": 5 }] },
+      { "id": "cal", "name": "Cal", "layers": [{ "sheet": "characters", "col": 0, "row": 6 }] },
+      { "id": "dee", "name": "Dee", "layers": [{ "sheet": "characters", "col": 1, "row": 6 }] },
+      { "id": "eli", "name": "Eli", "layers": [{ "sheet": "characters", "col": 0, "row": 7 }] },
+      { "id": "fay", "name": "Fay", "layers": [{ "sheet": "characters", "col": 1, "row": 7 }] },
+      { "id": "gus", "name": "Gus", "layers": [{ "sheet": "characters", "col": 0, "row": 8 }] },
+      { "id": "hal", "name": "Hal", "layers": [{ "sheet": "characters", "col": 1, "row": 8 }] },
+      { "id": "ira", "name": "Ira", "layers": [{ "sheet": "characters", "col": 0, "row": 9 }] },
+      { "id": "jo", "name": "Jo", "layers": [{ "sheet": "characters", "col": 1, "row": 9 }] },
+      { "id": "kit", "name": "Kit", "layers": [{ "sheet": "characters", "col": 0, "row": 10 }] },
+      { "id": "leo", "name": "Leo", "layers": [{ "sheet": "characters", "col": 1, "row": 10 }] }
+    ]
+  }
+}

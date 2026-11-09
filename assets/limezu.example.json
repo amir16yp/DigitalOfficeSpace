@@ -1,0 +1,89 @@
+{
+  "id": "limezu",
+  "tileSize": 32,
+  "margin": 0,
+  "credit": {
+    "name": "LimeZu",
+    "url": "https://limezu.itch.io/moderninteriors"
+  },
+  "sheets": {
+    "interiors": "interiors.png",
+    "office": "office.png",
+    "characters": "characters.png"
+  },
+  "sheetStride": {
+    "interiors": 32,
+    "office": 32,
+    "characters": 32
+  },
+  "tiles": [
+    {
+      "id": 1,
+      "name": "Floor",
+      "sheet": "interiors",
+      "col": 0,
+      "row": 0,
+      "kind": "floor",
+      "collision": false,
+      "blocksSound": false
+    },
+    {
+      "id": 2,
+      "name": "Wall",
+      "sheet": "interiors",
+      "col": 0,
+      "row": 1,
+      "kind": "wall",
+      "collision": true,
+      "blocksSound": true
+    },
+    {
+      "id": 3,
+      "name": "Door",
+      "sheet": "interiors",
+      "col": 1,
+      "row": 1,
+      "kind": "door",
+      "collision": false,
+      "blocksSound": false
+    }
+  ],
+  "avatars": {
+    "mode": "layers",
+    "groups": [
+      {
+        "id": "body",
+        "name": "Body",
+        "options": [
+          {
+            "id": "light",
+            "name": "Light",
+            "frames": [
+              { "dir": 0, "frame": 0, "sheet": "characters", "col": 0, "row": 0 },
+              { "dir": 0, "frame": 1, "sheet": "characters", "col": 1, "row": 0 },
+              { "dir": 1, "frame": 0, "sheet": "characters", "col": 0, "row": 1 },
+              { "dir": 1, "frame": 1, "sheet": "characters", "col": 1, "row": 1 },
+              { "dir": 2, "frame": 0, "sheet": "characters", "col": 0, "row": 2 },
+              { "dir": 2, "frame": 1, "sheet": "characters", "col": 1, "row": 2 },
+              { "dir": 3, "frame": 0, "sheet": "characters", "col": 0, "row": 3 },
+              { "dir": 3, "frame": 1, "sheet": "characters", "col": 1, "row": 3 }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "hair",
+        "name": "Hair",
+        "options": [
+          {
+            "id": "short",
+            "name": "Short",
+            "sheet": "characters",
+            "col": 2,
+            "row": 0
+          }
+        ]
+      }
+    ]
+  }
+}
